@@ -4,12 +4,13 @@ import java.util.*
 
 //only primary constructor can have var val
 abstract class Person(val date: Date) : ISleepable, IWalkable {
+    var books: Array<Book>? = null
     abstract fun makeSomeChildren(numberOfChildren: Int)
     open fun makeOneChild() {
         print("I have one child :) ")
     }
 
-    override fun sleep(string: String) {
+    override fun sleep(where: String ) {
         super<ISleepable>.sleep("ROME")
         super<IWalkable>.sleep("ROME")
     }
