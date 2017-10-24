@@ -37,7 +37,8 @@ class MainTest {
         println("user3: ${user3.name}")
 
         //user3.printMyValues()
-
+        SecurityProvider().printProviders()
+        SecurityProvider().printProvidersIterator()
         assertEquals(4, 2 + 2)
     }
 }
