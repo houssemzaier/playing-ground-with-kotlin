@@ -1,8 +1,8 @@
 package com.example.hzaier.myapplicationkt
 
 import java.util.*
-
-abstract class Person(date: Date) : ISleepable, IWalkable {
+//only primary constructor can have var val
+abstract class Person(val date: Date) : ISleepable, IWalkable {
     abstract fun makeSomeChildren(numberOfChildren: Int)
     open fun makeOneChild() {
         print("I have one child :) ")
