@@ -22,6 +22,7 @@ class User(var name: String) {
 
     var age: Int? = null
     var phoneNumber: String? = null
+//    var birthSeason: SeasonType = SeasonType.Summer
 
 
     init {
@@ -83,5 +84,6 @@ class User(var name: String) {
         10 -> "**$nom is young**"
         else -> "**$nom is not young**"
     }
+
 
 }
