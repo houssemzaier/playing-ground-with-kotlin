@@ -1,5 +1,7 @@
-package com.example.hzaier.myapplicationkt
+package com.example.hzaier.myapplicationkt.utils
 
+import com.example.hzaier.myapplicationkt.persons.User
+import com.example.hzaier.myapplicationkt.papers.Book
 import java.util.*
 
 /**

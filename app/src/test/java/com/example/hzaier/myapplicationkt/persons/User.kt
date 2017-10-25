@@ -1,6 +1,6 @@
 @file:JvmName("_User")
 
-package com.example.hzaier.myapplicationkt
+package com.example.hzaier.myapplicationkt.persons
 
 import java.util.*
 

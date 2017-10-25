@@ -1,4 +1,4 @@
-package com.example.hzaier.myapplicationkt
+package com.example.hzaier.myapplicationkt.utils
 
 /**
  * Created by hzaier on 10/24/2017.

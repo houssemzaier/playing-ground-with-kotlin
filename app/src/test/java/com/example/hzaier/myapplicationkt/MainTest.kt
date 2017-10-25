@@ -1,5 +1,11 @@
 package com.example.hzaier.myapplicationkt
 
+import com.example.hzaier.myapplicationkt.papers.Book
+import com.example.hzaier.myapplicationkt.papers.Books
+import com.example.hzaier.myapplicationkt.persons.PersonFactory
+import com.example.hzaier.myapplicationkt.persons.User
+import com.example.hzaier.myapplicationkt.persons.displayInConsole
+import com.example.hzaier.myapplicationkt.utils.*
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.util.*
@@ -48,12 +54,13 @@ class MainTest {
         // println("Fibonacci ${Fibonacci.fibunatciSeqFun(-2)}")
         println("Fibonacci ${Fibonacci.fibunatciSeqFun(8)}")
 
-        val stupidPerson = PersonFactory.createPerson()
+        val stupidPerson = PersonFactory.createPerson(isStupidPerson = true)
         stupidPerson.makeSomeChildren(15)
 
-        var book1= Book("Mike454654", "AndroidBook", "blablablaAythor",Date())
+        var book1= Book("Mike454654", "AndroidBook", "blablablaAythor", Date())
         book1.bookName="AAAA"
-        book1.makeSomeChildren(5)
+        book1.printself()
+
 
         assertEquals(4, 2 + 2)
     }
