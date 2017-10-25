@@ -5,10 +5,17 @@ import java.util.*
 /**
  * Created by hzaier on 10/24/2017.
  */
+interface JsonRpcSerilizer<T> {
+    fun toJsonRpc(item: T)
+}
 
 class Utility() {
-    companion object {
-         fun calculateDateNow()=Date()
+    companion object : JsonRpcSerilizer<Book> {
+        override fun toJsonRpc(item: Book) {
+            println(item.toString())
+        }
+
+        fun calculateDateNow() = Date()
     }
 
 }

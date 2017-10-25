@@ -44,6 +44,11 @@ class MainTest {
         Books.allBooks.filter { it.bookName == "FRFRa" }.firstOrNull()?.printself()
 
         println(Utility.calculateDateNow().toString())
+        // println("Fibonacci ${Fibonacci.fibunatciSeqFun(-2)}")
+        println("Fibonacci ${Fibonacci.fibunatciSeqFun(8)}")
+
+        val stupidPerson = PersonFactory.createPerson()
+        stupidPerson.makeSomeChildren(15)
 
         assertEquals(4, 2 + 2)
     }
