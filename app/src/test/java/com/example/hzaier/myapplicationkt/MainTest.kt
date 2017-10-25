@@ -34,11 +34,17 @@ class MainTest {
 
         var user2 = User("Ronaldo")
         var user3 = user!! + user2
-        println("user3: ${user3.name}")
+        println("user3: ${user3?.name}")
 
         //user3.printMyValues()
         SecurityProvider().printProviders()
         SecurityProvider().printProvidersIterator()
+
+        Books.inisializeBooks()
+        Books.allBooks.filter { it.bookName == "FRFRa" }.firstOrNull()?.printself()
+
+        println(Utility.calculateDateNow().toString())
+
         assertEquals(4, 2 + 2)
     }
 }

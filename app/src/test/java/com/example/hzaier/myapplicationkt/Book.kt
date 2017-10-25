@@ -6,4 +6,8 @@ package com.example.hzaier.myapplicationkt
 data class Book(var bookId: String,
                 var bookName: String,
                 var bookAuthorName: String
-)
+) {
+    fun printself() {
+        println("this are the infos of the book: $bookId $bookName $bookAuthorName" )
+    }
+}
