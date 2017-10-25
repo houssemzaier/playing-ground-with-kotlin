@@ -50,6 +50,10 @@ class MainTest {
         val stupidPerson = PersonFactory.createPerson()
         stupidPerson.makeSomeChildren(15)
 
+        var book1= Book("Mike454654", "AndroidBook", "blablablaAythor")
+        book1.bookName="AAAA"
+
+
         assertEquals(4, 2 + 2)
     }
 }
