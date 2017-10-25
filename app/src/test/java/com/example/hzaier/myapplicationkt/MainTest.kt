@@ -2,6 +2,7 @@ package com.example.hzaier.myapplicationkt
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import java.util.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -50,9 +51,9 @@ class MainTest {
         val stupidPerson = PersonFactory.createPerson()
         stupidPerson.makeSomeChildren(15)
 
-        var book1= Book("Mike454654", "AndroidBook", "blablablaAythor")
+        var book1= Book("Mike454654", "AndroidBook", "blablablaAythor",Date())
         book1.bookName="AAAA"
-
+        book1.makeSomeChildren(5)
 
         assertEquals(4, 2 + 2)
     }

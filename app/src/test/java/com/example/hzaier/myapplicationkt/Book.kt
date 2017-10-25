@@ -1,13 +1,23 @@
 package com.example.hzaier.myapplicationkt
 
+import java.util.*
+
 /**
  * Created by houssem on 24/10/2017.
  */
 data class Book(var bookId: String,
                 var bookName: String,
-                var bookAuthorName: String
-) {
-    constructor(person: Person) : this("NaN", "NaN", "NaN") {
+                var bookAuthorName: String,
+                var dateBook: Date
+) : Person(dateBook) {
+    override fun makeSomeChildren(numberOfChildren: Int) {
+        {
+            printself()
+            println("$numberOfChildren")
+        }
+    }
+
+    constructor(person: Person) : this("NaN", "NaN", "NaN", Date()) {
         this.person = person
     }
 
