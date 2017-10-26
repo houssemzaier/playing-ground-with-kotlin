@@ -27,6 +27,15 @@ class MainTest {
         println("the phone number is $phoneNumber");
 
         user?.displayWithLambda(::displayInConsole)
+        user?.displayWithLambda { it ->
+            println("1 it is the user $it")
+        }
+        user?.displayWithLambda({ it ->
+            println("2 it is the user $it")
+        })
+        user?.displayWithLambda(fun(msg: String) {
+            println("3 it is the user $msg")
+        })
 
         val numberString = "3"
         user?.age = try {
@@ -57,8 +66,8 @@ class MainTest {
         val stupidPerson = PersonFactory.createPerson(isStupidPerson = true)
         stupidPerson.makeSomeChildren(15)
 
-        var book1= Book("Mike454654", "AndroidBook", "blablablaAythor", Date())
-        book1.bookName="AAAA"
+        var book1 = Book("Mike454654", "AndroidBook", "blablablaAythor", Date())
+        book1.bookName = "AAAA"
         book1.printself()
 
 
