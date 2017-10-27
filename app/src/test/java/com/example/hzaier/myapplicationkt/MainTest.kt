@@ -70,6 +70,11 @@ class MainTest {
         book1.bookName = "AAAA"
         book1.printself()
 
+        Books.printTheBook0()
+        Books.printTheBook1()
+        Books.printTheBook11()
+        Books.printTheBook1111()
+        Books.printTheBook111()
 
         assertEquals(4, 2 + 2)
     }

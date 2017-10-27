@@ -9,6 +9,7 @@ class MainKt {
         fun main(args: Array<String>) {
             println("hello world ${args.size} ")
             //can't run this with AndroidStudio-RC2
+
         }
     }
 }
