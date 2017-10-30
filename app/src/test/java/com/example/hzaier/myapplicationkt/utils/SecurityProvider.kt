@@ -18,12 +18,34 @@ class SecurityProvider() {
         }
 
     }
+
     fun printProvidersIterator() {
         val iterator = getProviders().iterator()
         while (iterator.hasNext()) {
-            val provider= iterator.next();
+            val provider = iterator.next();
             println(provider.name)
-            provider.forEach{key,value -> println("\t$key: $value")}
+            provider.forEach { key, value -> println("\t$key: $value") }
         }
     }
+
+    fun getAllProviders(): List<ProviderDetails> {
+        return getProviders().flatMap { provider ->
+            provider.entries.filter { it -> it.key.toString().contains("JAVA", true) }
+                    .map { ProviderDetails(provider.name, it.key.toString()) }
+        }
+    }
+
+    fun mapAllProvidersToProviderDetails(): List<ProviderDetails> {
+        return getProviders().map { provider -> ProviderDetails(provider.name, "") }
+    }
+
+    fun mapAllProviders() {
+        getProviders().forEach { provider ->
+            println(provider.name)
+            provider.map { ProviderDetails(provider.name, provider.name.toString()) }
+        }
+
+    }
 }
+
+class ProviderDetails(name: String?, toString: String)
