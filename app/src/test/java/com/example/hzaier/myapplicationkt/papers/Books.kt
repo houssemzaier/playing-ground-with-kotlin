@@ -9,10 +9,11 @@ object Books {
     var allBooks = arrayListOf<Book>()
     fun inisializeBooks() {
         allBooks.add(Book("11111FFE3", "FRFR", "ANDREY", Date()))
-        allBooks.add(Book("11111FFE3", "SDER 22222", "VAVA", Date()))
-        allBooks.add(Book("11111FFzzE3", "CACA 213", "DEDE", Date()))
-        allBooks.add(Book("11111FFEz3", "DROID ZZZ13", "SEDA", Date()))
-        allBooks.add(Book("11111FFEz3", "DROID ZZZ13", "SEDA", Date()))
+        allBooks.add(Book("11111FFE3a", "SDER 22222", "VAVA", Date()))
+        allBooks.add(Book("11111FFzzEa3", "CACA 213", "DEDE", Date()))
+        allBooks.add(Book("11111FFEz3", "BAMBOO", "SEDA", Date()))
+        allBooks.add(Book("11111FFEz3z", "DROID ZZZ13", "SEDA", Date()))
+        allBooks.add(Book("11111FFEzzzz3", "DROID ZZZ13", "SEDA", Date()))
         allBooks.add(Book("11111FFEz3", "DROID ZZZ13", "SEDA", Date()))
     }
 
@@ -47,4 +48,11 @@ object Books {
         }
     }
 
+    fun findAndSelect() {
+        println("printTheBook1111")
+        allBooks.filter { it.bookName == "BAMBOO" }.map { findedBook ->
+            findedBook.bookAuthorName = "The Master of Bamboo"
+            println(findedBook)
+        }
+    }
 }

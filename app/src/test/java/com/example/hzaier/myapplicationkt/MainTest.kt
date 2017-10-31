@@ -2,6 +2,7 @@ package com.example.hzaier.myapplicationkt
 
 import com.example.hzaier.myapplicationkt.papers.Book
 import com.example.hzaier.myapplicationkt.papers.Books
+import com.example.hzaier.myapplicationkt.persons.Person
 import com.example.hzaier.myapplicationkt.persons.PersonFactory
 import com.example.hzaier.myapplicationkt.persons.User
 import com.example.hzaier.myapplicationkt.persons.displayInConsole
@@ -72,9 +73,27 @@ class MainTest {
 
         Books.printTheBook0()
         Books.printTheBook1()
+        Books.findAndSelect()
         Books.printTheBook11()
         Books.printTheBook1111()
         Books.printTheBook111()
+
+        var book2 = Book(object : Person(Date()) {
+            override fun makeSomeChildren(numberOfChildren: Int) {
+                println("the children are $numberOfChildren")
+            }
+        });
+        with(book2) {
+            bookAuthorName = "wiwa"
+            bookName = "aqaaa"
+            bookId = "zzz"
+        }
+        book2.apply  {
+            bookAuthorName = "awiwa"
+            bookName = "aaaaqaaa"
+            bookId = "zzzzzzzzzz"
+        }.printself()
+
 
         assertEquals(4, 2 + 2)
     }
