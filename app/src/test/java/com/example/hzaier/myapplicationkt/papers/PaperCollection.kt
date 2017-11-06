@@ -7,4 +7,5 @@ import java.util.*
  */
 abstract class PaperCollection (dateBook: Date){
     abstract fun getPaperCount():IntRange
+
 }

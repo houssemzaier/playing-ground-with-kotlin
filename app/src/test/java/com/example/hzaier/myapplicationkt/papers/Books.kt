@@ -7,6 +7,11 @@ import java.util.*
  */
 object Books {
     var allBooks = arrayListOf<Book>()
+    val allBooks11111 = listOf<Book>(
+            Book("11111ONE_ID", "11111ONE_NAME", "11111ONE_AUTHOR_NAME", Date()),
+            Book("11111TWO_ID", "11111TWO_NAME", "11111TWO_AUTHOR_NAME", Date())
+    )
+
     fun inisializeBooks() {
         allBooks.add(Book("11111FFE3", "FRFR", "ANDREY", Date()))
         allBooks.add(Book("11111FFE3a", "SDER 22222", "VAVA", Date()))
@@ -55,4 +60,36 @@ object Books {
             println(findedBook)
         }
     }
+
+    fun predecates() {
+        val condition = { it: Book -> it.datePaperCollection.before(Date()) }
+        val any: Boolean = allBooks.any(condition)
+        val all: Boolean = allBooks.all(condition)
+        val found: Book? = allBooks.find(condition)
+        val counts: Int = allBooks.count(condition)
+    }
+
+    fun flatmapSample() {
+        var allBooks1 = listOf<Book>(
+                Book("ONE_ID", "ONE_NAME", "ONE_AUTHOR_NAME", Date()),
+                Book("TWO_ID", "TWO_NAME", "TWO_AUTHOR_NAME", Date()),
+                Book("THREE_ID", "THREE_NAME", "THREE_AUTHOR_NAME", Date())
+        )
+
+        //  var X:List<Book> =allBooks1.flatMap(PaperCollection ::all  )
+        var xList: List<Book> = allBooks1.flatMap { allBooks11111 }.flatMap { allBooks1 }
+        println("xList")
+        xList.forEach(::println)
+    }
+
+    fun sequence() {
+        val map = allBooks11111
+               // .asSequence()
+                .filter { it -> println("eteration** $it"); it.bookName.length > 2 }.map { it.bookAuthorName + ": " + it.bookName }
+
+        map.forEach {
+            println("forEach $it")
+        }
+    }
+
 }

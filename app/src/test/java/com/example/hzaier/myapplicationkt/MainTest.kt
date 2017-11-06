@@ -94,6 +94,9 @@ class MainTest {
             bookId = "zzzzzzzzzz"
         }.printself()
 
+        Books.flatmapSample()
+
+        Books.sequence()
 
         assertEquals(4, 2 + 2)
     }

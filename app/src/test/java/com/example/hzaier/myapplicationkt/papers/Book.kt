@@ -13,11 +13,14 @@ data class Book(var bookId: String,
 ) : PaperCollection(datePaperCollection) {
     private var person: Person? = null
 
+
+
+
     override fun getPaperCount(): IntRange {
         return 20..1000
     }
 
-    constructor(author: Person) : this(author.books?.first()?.bookId!!, author.books?.first()?.bookName!!, author.books?.first()?.bookAuthorName!!, author.date) {
+    constructor (author: Person) : this(author.books?.first()?.bookId!!, author.books?.first()?.bookName!!, author.books?.first()?.bookAuthorName!!, author.date) {
         this.person = author
     }
 
