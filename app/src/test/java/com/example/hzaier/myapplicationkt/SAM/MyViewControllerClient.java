@@ -25,5 +25,11 @@ public class MyViewControllerClient {
 
             }
         });
+        myViewController.showUser31(new ViewClick13() {
+            @Override
+            public void onView(int idView, String nameView, User use) {
+
+            }
+        });
     }
 }

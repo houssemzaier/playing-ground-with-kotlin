@@ -20,9 +20,18 @@ class MyViewControllerKtClient {
         myViewController.showUser2(object : ViewClick2 {
             override fun onView(use: User?) {
             }
+
             override fun onResult() {
             }
         })
+
+        myViewController.showUser31 { idView, nameView, user ->
+            println("$idView $nameView $user")
+        }
+
+        myViewController.showUser311(User("LOL")) { idView, nameView, user ->
+            println("$idView $nameView $user")
+        }
 
 
     }
