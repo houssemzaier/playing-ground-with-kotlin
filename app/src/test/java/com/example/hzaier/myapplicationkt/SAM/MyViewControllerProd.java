@@ -25,5 +25,6 @@ public class MyViewControllerProd {
     }
 
     void showUser311(User user, ViewClick13 viewClick) {
+        viewClick.onView(1,"",new User(""));
     }
 }

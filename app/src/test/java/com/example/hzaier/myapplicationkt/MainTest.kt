@@ -1,5 +1,7 @@
 package com.example.hzaier.myapplicationkt
 
+import com.example.hzaier.myapplicationkt.SAM.UserClicker
+import com.example.hzaier.myapplicationkt.SAM.UserClickerKt
 import com.example.hzaier.myapplicationkt.papers.Book
 import com.example.hzaier.myapplicationkt.papers.Books
 import com.example.hzaier.myapplicationkt.persons.Person
@@ -97,7 +99,7 @@ class MainTest {
         Books.flatmapSample()
 
         Books.sequence()
-
+        UserClickerKt().makeClick(UserClicker())
         assertEquals(4, 2 + 2)
     }
 }
