@@ -27,6 +27,21 @@ class UserClickerKt {
             println("user $user")
         }
 
+        var f = { age: Int, date: Date, user: User ->
+            println("age $age")
+            println("date $date")
+            println("user $user")
+        }
+
+        var ff = OnClickListener({ age: Int, date: Date, user: User ->
+            println("age $age")
+            println("date $date")
+            println("user $user")
+        })
+
+
+        userClicker.makeClick(f)
+        userClicker.makeClick(ff)
 //        userClicker.makeClick (::printer)
     }
 
