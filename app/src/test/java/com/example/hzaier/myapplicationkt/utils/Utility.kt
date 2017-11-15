@@ -28,8 +28,26 @@ fun String.replaceMultipleWhiteSpaceEx(): String {
     return regex.replace(this, " ")
 }
 
-operator infix fun User.plus(user: User?): User? {
+
+operator fun User.plus(user: User?): User? {
     return User(this.name + "___" + user?.name)
 }
 
+infix fun User.add(user: User?): User? {
+    return User(this.name + "___" + user?.name)
+}
+
+inline fun User.writeLn(user: User?, action: () -> Unit) {
+    action()
+    User(this.name + "___" + user?.name)
+}
+
+inline fun <reified T> useGenericReification(list: Array<Any>) {
+    list.forEach {
+        if (it is T) {
+            println("yes it is  the type")
+            return@forEach
+        }
+    }
+}
 

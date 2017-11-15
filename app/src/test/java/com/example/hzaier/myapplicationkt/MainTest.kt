@@ -18,7 +18,12 @@ import java.util.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class MainTest {
+abstract class MainTest {
+
+    lateinit var book: Book
+    var book1: Book? = null
+    abstract var book11: Book
+
     @Test
     fun mainTest() {
 
@@ -53,6 +58,7 @@ class MainTest {
 
         var user2 = User("Ronaldo")
         var user3 = user!! + user2
+        var user4 = user!! add user2
         println("user3: ${user3?.name}")
 
         //user3.printMyValues()
@@ -90,7 +96,7 @@ class MainTest {
             bookName = "aqaaa"
             bookId = "zzz"
         }
-        book2.apply  {
+        book2.apply {
             bookAuthorName = "awiwa"
             bookName = "aaaaqaaa"
             bookId = "zzzzzzzzzz"
@@ -100,6 +106,12 @@ class MainTest {
 
         Books.sequence()
         UserClickerKt().makeClick(UserClicker())
+
+        book1.let {
+            print("something todo if ")
+
+        }
+
         assertEquals(4, 2 + 2)
     }
 }
