@@ -1,4 +1,4 @@
-package com.example.hzaier.myapplicationkt.utils;
+package com.example.hzaier.myapplicationkt.utils.generic;
 
 import java.util.List;
 

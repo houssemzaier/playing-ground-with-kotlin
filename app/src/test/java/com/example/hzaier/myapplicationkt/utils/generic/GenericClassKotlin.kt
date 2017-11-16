@@ -1,4 +1,4 @@
-package com.example.hzaier.myapplicationkt.utils
+package com.example.hzaier.myapplicationkt.utils.generic
 
 /**
  * Created by hzaier on 11/15/2017.
