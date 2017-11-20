@@ -14,6 +14,12 @@ class GenericClassKotlin<R> {
         }
     }
 
+    fun <T> List<*>.copyList(list1: MutableList<out T>, list: MutableList<in T>) {
+        list1.forEach {
+            list.add(it)
+        }
+    }
+
     fun make() {
         var list = mutableListOf<Student>()
         list.add(Student())
