@@ -17,12 +17,12 @@ inline fun testC(crossinline f: () -> Unit) {
     threadx { f() }
 }
 
-inline fun testIn(f: () -> Unit) {
-    f()
+inline fun testIn(s: String, f: (_:Int) -> Unit) {
+    f(3)
 }
 
 fun testClient() {
-    testIn {
+    testIn("") {
         println("aaaaaaaaaaa")
     }
 }
@@ -40,3 +40,8 @@ inline fun <reified T> testE(mList: List<Any>, noinline f: () -> Unit) {
             threadx { f() }
     }
 }
+
+inline fun bind(event: String, handler: () -> Unit) {
+    testIn("", { _: Int -> handler() })
+}
+
