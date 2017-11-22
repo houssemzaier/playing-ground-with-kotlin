@@ -39,5 +39,4 @@ dependencies {
     testImplementation "com.nhaarman:mockito-kotlin:1.5.0"
 
 
-
 }

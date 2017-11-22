@@ -9,7 +9,7 @@ import com.example.hzaier.myapplicationkt.persons.User;
 public interface ViewClick {
     void onView(User use);
 
-    class DefaultViewClick  implements ViewClick {
+    class DefaultViewClick implements ViewClick {
         @Override
         public void onView(User use) {
             System.out.println(use.toString());

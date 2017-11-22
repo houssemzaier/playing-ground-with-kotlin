@@ -7,7 +7,7 @@ import com.example.hzaier.myapplicationkt.persons.User;
  */
 
 public class MyViewControllerClient {
-    void showUser( MyViewControllerProd myViewController ) {
+    void showUser(MyViewControllerProd myViewController) {
         myViewController.showUser(new ViewClick() {
             @Override
             public void onView(User user) {

@@ -17,7 +17,7 @@ inline fun testC(crossinline f: () -> Unit) {
     threadx { f() }
 }
 
-inline fun testIn(s: String, f: (_:Int) -> Unit) {
+inline fun testIn(s: String, f: (_: Int) -> Unit) {
     f(3)
 }
 

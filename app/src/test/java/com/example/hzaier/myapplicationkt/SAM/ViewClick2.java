@@ -8,8 +8,10 @@ import com.example.hzaier.myapplicationkt.persons.User;
 
 public interface ViewClick2 {
     void onView(User use);
-    void  onResult();
-    class DefaultViewClick  implements ViewClick2 {
+
+    void onResult();
+
+    class DefaultViewClick implements ViewClick2 {
         @Override
         public void onView(User use) {
             System.out.println(use.toString());

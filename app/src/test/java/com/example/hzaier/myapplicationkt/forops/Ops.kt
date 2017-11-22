@@ -24,7 +24,7 @@ object Ops {
         for (item in tab.indices) {
             println("item $item ")
         }
-        for (item in tab ) {
+        for (item in tab) {
             println("item $item ")
         }
     }

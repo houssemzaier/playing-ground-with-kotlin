@@ -69,7 +69,7 @@ class Test {
         val listOfNames = listOf("A", "C", "B", "D")
         listOfNames should {
             contains("A") and contains("D") and notContains("z") and haveSizeLessThan(5)
-         }
+        }
 
         "ssss " should (StartsWithWhiteSpace or EndsWithWhiteSpace)
 

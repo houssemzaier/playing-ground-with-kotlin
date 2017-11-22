@@ -8,6 +8,7 @@ import java.util.*
 interface IPersonFactory {
     fun createPerson(isStupidPerson: Boolean): Person
 }
+
 //strategy && factory DesignPattern
 class PersonFactory private constructor() {
     companion object : IPersonFactory {

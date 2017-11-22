@@ -10,9 +10,9 @@ import java.util.logging.XMLFormatter
 class MainKtZ {
     @Test
     fun mainTest() {
-        Lambda.dodo(::MainKtZ,listOf(33,33,"zzz","zzzzzzz")  )
-        Lambda.dodo("",listOf(33,33,"zzz","zzzzzzz")  )
-        Lambda.dodo(::XMLFormatter,listOf(33,33,"zzz","zzzzzzz")  )
-        Lambda.dodo(::XMLFormatter,listOf( 2,2)  )
+        Lambda.dodo(::MainKtZ, listOf(33, 33, "zzz", "zzzzzzz"))
+        Lambda.dodo("", listOf(33, 33, "zzz", "zzzzzzz"))
+        Lambda.dodo(::XMLFormatter, listOf(33, 33, "zzz", "zzzzzzz"))
+        Lambda.dodo(::XMLFormatter, listOf(2, 2))
     }
 }

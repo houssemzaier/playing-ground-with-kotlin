@@ -5,7 +5,7 @@ package com.example.hzaier.myapplicationkt.utils.generic
  */
 class GenericClassKotlinClient {
     val genericClassKotlin = GenericClassKotlin<StringBuilder>()
-    
+
     fun makeSomething() {
         genericClassKotlin.makeSomething<Int>(listOf())
     }

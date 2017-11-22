@@ -84,7 +84,7 @@ object Books {
 
     fun sequence() {
         val map = allBooks11111
-               // .asSequence()
+                // .asSequence()
                 .filter { it -> println("eteration** $it"); it.bookName.length > 2 }.map { it.bookAuthorName + ": " + it.bookName }
 
         map.forEach {

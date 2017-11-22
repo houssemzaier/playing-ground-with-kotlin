@@ -6,10 +6,12 @@ import java.util.*
 //only primary constructor can have var val
 abstract class Person(val date: Date) : ISleepable, IWalkable {
     var books: Array<Book>? = null
+
     init {
-        books= arrayOf<Book>(Book("DEFAULT IDBOOK","DEFAULT NAMEBOOK","DEFAULT  AUTHOR NAME",Date()))
+        books = arrayOf<Book>(Book("DEFAULT IDBOOK", "DEFAULT NAMEBOOK", "DEFAULT  AUTHOR NAME", Date()))
 
     }
+
     abstract fun makeSomeChildren(numberOfChildren: Int)
     open fun makeOneChild() {
         println("I have one child :) ")

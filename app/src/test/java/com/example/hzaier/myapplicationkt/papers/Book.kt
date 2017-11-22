@@ -14,8 +14,6 @@ data class Book(var bookId: String,
     private var person: Person? = null
 
 
-
-
     override fun getPaperCount(): IntRange {
         return 20..1000
     }
